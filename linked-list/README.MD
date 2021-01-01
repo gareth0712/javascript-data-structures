@@ -4,8 +4,6 @@ Linked lists are linear data structures that hold data in individual objects cal
 
 Linked lists are often used because of their efficient insertion and deletion. They can be used to implement stacks, queues, and other abstract data types.
 
-# Properties of Linked List
-
 Run the following to show a simple Linked List
 
 ```
@@ -18,15 +16,32 @@ It returns the following
 Node { data: 100, next: Node { data: 200, next: null } }
 ```
 
-Each node contains a value and a reference (also known as a pointer) to the next node. The last node often points to a null node which means the list is at its end.
+For demonstration of insertion (at the beginning or add to nth index or last), deletion (at the beginning or delete nth node or last), and getting a list of data from linked list, run the following
 
-Linked lists offer some important advantages over other linear data structures. Unlike arrays, they are a dynamic data structure, resizable at run-time. Also, the insertion and deletion operations are efficient and easily implemented.
+```
+node run.js
+```
 
-However, linked lists do have some drawbacks. Unlike arrays, linked lists aren't fast at finding the nthn^\text{th}nth item. To find a node at position nnn, you have to start the search at the first node in the linked list, following the path of references nnn times. Also, because linked lists are inherently sequential in the forward direction, operations like backward traversal--visiting every node starting from the end and ending in the front--is especially cumbersome.
+# Properties of Linked List
 
-Additionally, linked lists use more storage than the array due to their property of referencing the next node in the linked list.
+Each node contains a value and a reference, or pointer, to next node. The last one often points to a null node which means the list is at its end.
 
-Finally, unlike an array whose values are all stored in contiguous memory, a linked list's nodes are at arbitrary, possibly far apart locations in memory. This means that the CPU can't effectively cache the contents of a linked list nearly as well as an array resulting in poor performance. This is the main reason why ring buffers are used to implement queues instead of linked lists in high-performance applications where middle insertion and deletion functionality isn't needed (e.g. network drivers).
+## Advantages
+
+- A dynamic data structure, resizable at run-time
+- Insertion and deletion operations are time efficient and could be implemented easily
+
+## Disadvantages
+
+- Not fast at finding the nth node. To find nth node, we should start from the beginning node, following the path of references with n number of times.
+
+- Since they are inherently sequential in the forward direction, operations like backward traversal, that is, starting from the last node and ending in the first node, is cumbersome.
+
+- They use more storage than arrays because of their property of referencing next node.
+
+- Unlike an array whose values are all stored in contiguous memory, a linked list's nodes are at arbitrary, possibly far apart locations in memory => CPU can't effectively cache a linked list nearly like an array. This results in poor performance.
+
+- The above states the main reason why ring buffers are used to implement queues instead of linked lists in high-performance applications, of which middle insertion and deletion functionality arent needed.
 
 # Time and Space Complexity
 
