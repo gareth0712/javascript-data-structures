@@ -15,7 +15,7 @@
 // numWays(N) = numWays(N - 1) + numWays(N - 2) where N > 1
 // numWays(N) = 1 where N <= 1
 
-// 1) Using recursion
+// 1) Using recursion: Time complexity is O(2^n)
 // const numWays = (staircase) => {
 //   if (staircase > 1) {
 //     return numWays(staircase - 1) + numWays(staircase - 2);
@@ -25,7 +25,7 @@
 //   }
 // };
 
-// 2) More efficient way
+// 2) More efficient way: Time complexity is O(n)
 const numWays = (staircase) => {
   if (staircase < 0) return undefined;
   if (staircase === 1 || staircase === 0) return 1;
