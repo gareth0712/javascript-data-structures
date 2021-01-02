@@ -51,8 +51,16 @@ Linked lists have most of their benefit when it comes to the insertion and delet
 
 However, unlike dynamic arrays, accessing the data in these nodes takes linear time because of the need to search through the entire list via pointers. It's also important to note that there is no way of optimizing search in linked lists. In the array, we could at least keep the array sorted. However, since we don't know how long the linked list is, there is no way of performing a binary search:
 
-Insertion - O(1),Deletion - O(1),Indexing - O(n),Search - O(n).\begin{array}{c}&&\text{Insertion - O(1),} &\text{Deletion - O(1),} \\ &\text{Indexing - O(n),} &\text{Search - O(n)}.\end{array}​Indexing - O(n),​Insertion - O(1),Search - O(n).​Deletion - O(1),
+Insertion - O(1)
+
+Deletion - O(1)
+
+Indexing - O(n)
+
+Search - O(n)
 
 ## Space
 
-Linked lists hold two main pieces of information (the value and pointer) per node. This means that the amount of data stored increases linearly with the number of nodes in the list. Therefore, the space complexity of the linked list is linear:
+Linked lists hold the value and pointer per node. This means that the amount of data stored increases linearly with the number of nodes in the list.
+
+Thus, the space complexity is O(n)
